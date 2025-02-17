@@ -4,13 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>My Personal Page</title>
     <style>
-        /* تنسيق الروابط في أعلى الصفحة */
+        /* تنسيق الصفحة العامة */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            padding-top: 60px; /* لضمان عدم تداخل المحتوى مع شريط التنقل */
+        }
+
+        /* تصميم شريط التنقل */
         nav {
             background-color: #f4f4f4;
             padding: 10px;
-            text-align: center;
             position: fixed;
             top: 0;
             width: 100%;
@@ -28,15 +36,7 @@
             color: #007BFF;
         }
 
-        /* تنسيق المحتوى */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            padding-top: 60px;
-            text-align: center;
-        }
-
+        /* تصميم الأقسام */
         section {
             max-width: 800px;
             margin: auto;
@@ -44,8 +44,20 @@
             text-align: left;
         }
 
-        hr {
-            margin: 20px 0;
+        /* تنسيق الجدول */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
         }
 
         /* زر الرجوع للأعلى */
@@ -58,9 +70,9 @@
 
 <body>
 
-    <!-- قائمة الروابط للتنقل داخل الصفحة -->
+    <!-- شريط التنقل -->
     <nav>
-        <a href="#about">About Myself</a> |
+        <a href="#about">About Me</a> |
         <a href="#skills">My Skills</a> |
         <a href="#achievements">My Achievements</a> |
         <a href="#contact">Contact Me</a>
@@ -68,58 +80,70 @@
 
     <hr>
 
-    <!-- وصف الموقع -->
-    <section>
-        <h2>Welcome to My Portfolio</h2>
-        <p>This portfolio showcases my personal information, skills, and achievements in the field of technology.</p>
-    </section>
-
-    <hr>
-
     <!-- قسم التعريف عن النفس -->
     <section id="about">
-        <h3>About Myself:</h3>
-        <p>1- Name: Suleiman Anwar Al-Jeteili</p>
-        <p>2- Date of Birth: 18/12/2005</p>
-        <p>3- Place of Birth: KSA, Qassim, Unaizah</p>
-        <p>4- TVTC College Student</p>
-        <p>5- Passionate about electronics, especially computers. I can program in HTML and JavaScript, and I aspire to design programs that benefit society.</p>
-        <p>6- I used to work in electronics maintenance, especially phones, and now I do another job in the evening.</p>
-        <p>7- My high school graduation year is 2023</p>
-        <p>8- My Email: <a href="mailto:Sloooooomeey@gmail.com">Sloooooomeey@gmail.com</a></p>
-       <img src="index.html/my profile picture.jpeg" alt="my profile picture " width="200"> 
+        <h2>About Me</h2>
+        <p><strong>Name:</strong> Suleiman Anwar Al-Jeteili</p>
+        <p><strong>Date of Birth:</strong> 18/12/2005</p>
+        <p><strong>Place of Birth:</strong> Unaizah, Qassim, KSA</p>
+        <p><strong>Specialization:</strong> TVTC College Student</p>
+        <p><strong>Interests:</strong> Passionate about electronics, especially computers. Aspiring to develop useful programs.</p>
+        <p><strong>Email:</strong> <a href="mailto:Sloooooomeey@gmail.com">Sloooooomeey@gmail.com</a></p>
+        <img src="index.html\my profile picture.jpeg" alt="My Profile Picture" width="200">
     </section>
 
     <hr>
 
     <!-- قسم المهارات -->
     <section id="skills">
-        <h3>My Skills:</h3>
+        <h2>My Skills</h2>
         <ul>
-            <li>I can learn quickly</li>
-            <li>Work under pressure</li>
-            <li>Adapt to the work environment</li>
-            <li>I am a good communicator</li>
-            <li>I have a quick analytical mind</li>
+            <li>Fast Learner</li>
+            <li>Work Under Pressure</li>
+            <li>Adaptability</li>
+            <li>Effective Communication</li>
+            <li>Quick Analytical Thinking</li>
         </ul>
+
+        <!-- جدول يعرض المهارات ومستوياتها -->
+        <h3>Skills Table</h3>
+        <table>
+            <tr>
+                <th>Skill</th>
+                <th>Level</th>
+            </tr>
+            <tr>
+                <td>Programming</td>
+                <td>Intermediate</td>
+            </tr>
+            <tr>
+                <td>Time Management</td>
+                <td>Very Good</td>
+            </tr>
+            <tr>
+                <td>Teamwork</td>
+                <td>Excellent</td>
+            </tr>
+        </table>
     </section>
 
     <hr>
 
     <!-- قسم الإنجازات -->
     <section id="achievements">
-        <h3>My Achievements:</h3>
-        <ul>
-            <li>I have certificates and courses in the computer field</li>
-            <li>I have certificates in English</li>
-        </ul>
+        <h2>My Achievements</h2>
+        <ol>
+            <li>Certified in Computer Science</li>
+            <li>English Language Certifications</li>
+            <li>Experience in Phone Maintenance</li>
+        </ol>
     </section>
 
     <hr>
 
     <!-- قسم التواصل -->
     <section id="contact">
-        <h3>Contact Me:</h3>
+        <h2>Contact Me</h2>
         <p>You can reach me via email: <a href="mailto:Sloooooomeey@gmail.com">Sloooooomeey@gmail.com</a></p>
     </section>
 
@@ -133,4 +157,3 @@
 </body>
 
 </html>
-
