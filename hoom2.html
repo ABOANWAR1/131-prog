@@ -27,6 +27,12 @@
     <p><strong>Specialization:</strong> TVTC College Student</p>
     <p><strong>Interests:</strong> Passionate about electronics, especially computers. Aspiring to develop useful programs.</p>
     <p><strong>Email:</strong> <a href="mailto:Sloooooomeey@gmail.com">Sloooooomeey@gmail.com</a></p>
+
+    <div style="text-align: center; margin-top: 20px;">
+      <button onclick="showDate()">Show Date</button>
+      <button onclick="showInfo()">Show Info</button>
+      <button onclick="sayWelcome()">Welcome</button>
+    </div>
   </section>
 
   <section id="skills" class="skills-courses animate delay-2">
@@ -65,9 +71,54 @@
     </div>
   </footer>
 
+  <div id="popup" style="
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #8B4513;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 999;
+    transition: opacity 0.3s ease;
+  "></div>
+
+  <script>
+    function showPopup(message) {
+      const popup = document.getElementById('popup');
+      popup.innerText = message;
+      popup.style.display = 'block';
+      popup.style.opacity = '1';
+      setTimeout(() => {
+        popup.style.opacity = '0';
+        setTimeout(() => {
+          popup.style.display = 'none';
+        }, 500);
+      }, 3000);
+    }
+
+    function showDate() {
+      const today = new Date();
+      const formatted = today.toLocaleDateString();
+      showPopup("Today's date is: " + formatted);
+    }
+
+    function showInfo() {
+      showPopup("You are viewing Suleiman's profile. Passionate about electronics and programming.");
+    }
+
+    function sayWelcome() {
+      showPopup("Welcome to my website! Glad you're here.");
+    }
+  </script>
+
 </body>
 </html>
 X (formerly Twitter)
 X. It’s what’s happening
 
-From breaking news and entertainment to sports and politics, get the full story with all the live commentary.
+From breaking news and entertainment to sports and politics, get the full story with all the li
